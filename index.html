@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hassan Samy | Procurement & Strategic Sourcing Professional</title>
+  <meta name="description" content="Hassan Samy — Procurement & Strategic Sourcing Professional with 18+ years of experience.">
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --panel:#111720;
+      --panel2:#151c26;
+      --text:#f4f6f8;
+      --muted:#9da8b5;
+      --accent:#d7ad63;
+      --line:rgba(255,255,255,.09);
+      --max:1120px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,Segoe UI,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(92%,var(--max));margin:auto}
+    nav{
+      position:sticky;top:0;z-index:20;
+      background:rgba(11,15,20,.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:800;letter-spacing:.12em}
+    .brand span{color:var(--accent)}
+    .nav-links{display:flex;gap:28px;font-size:14px;color:var(--muted)}
+    .nav-links a:hover{color:var(--text)}
+    .hero{min-height:78vh;display:flex;align-items:center;padding:90px 0 80px}
+    .eyebrow{
+      color:var(--accent);font-size:13px;font-weight:700;
+      letter-spacing:.18em;text-transform:uppercase;margin-bottom:22px
+    }
+    h1{font-size:clamp(46px,8vw,92px);line-height:.98;letter-spacing:-.055em;max-width:900px}
+    .hero h1 span{color:var(--accent)}
+    .hero-sub{font-size:clamp(20px,2.5vw,30px);margin:26px 0 18px;color:#dce2e8}
+    .hero-copy{max-width:760px;color:var(--muted);font-size:18px}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+    .chip{border:1px solid var(--line);padding:9px 14px;border-radius:999px;color:#d8dee5;font-size:13px}
+    .section{padding:85px 0;border-top:1px solid var(--line)}
+    .section-title{font-size:36px;letter-spacing:-.035em;margin-bottom:14px}
+    .section-lead{color:var(--muted);max-width:700px;margin-bottom:38px}
+    .about{display:grid;grid-template-columns:1.2fr .8fr;gap:55px;align-items:start}
+    .about p{font-size:19px;color:#cbd3dc}
+    .side-card{background:var(--panel);border:1px solid var(--line);padding:28px;border-radius:18px}
+    .side-card strong{display:block;font-size:30px;color:var(--accent);margin-bottom:4px}
+    .side-card span{color:var(--muted);font-size:14px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .stat{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:28px}
+    .stat strong{display:block;font-size:38px;letter-spacing:-.04em;color:var(--accent)}
+    .stat span{display:block;color:var(--muted);font-size:14px;margin-top:5px}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .skill{background:var(--panel);border:1px solid var(--line);padding:20px;border-radius:14px;font-weight:600}
+    .timeline{position:relative;margin-top:25px}
+    .timeline:before{content:"";position:absolute;left:9px;top:0;bottom:0;width:1px;background:var(--line)}
+    .job{position:relative;padding:0 0 45px 42px}
+    .dot{position:absolute;left:3px;top:8px;width:13px;height:13px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px var(--bg)}
+    .job-date{font-size:13px;color:var(--accent);font-weight:700;letter-spacing:.08em}
+    .job h3{font-size:24px;margin:7px 0 2px}
+    .job-company{color:#d7dde4;margin-bottom:10px}
+    .job p{color:var(--muted);max-width:780px}
+    .certs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .cert{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+    .cert strong{display:block;font-size:16px}
+    .cert span{color:var(--muted);font-size:14px}
+    .tools{display:flex;flex-wrap:wrap;gap:12px}
+    .tool{padding:12px 17px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:#d8dee5}
+    .contact{
+      text-align:center;
+      padding:95px 0;
+    }
+    .contact h2{font-size:clamp(38px,6vw,64px);letter-spacing:-.045em;margin-bottom:12px}
+    .contact p{color:var(--muted);margin-bottom:28px}
+    .buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+    .btn{padding:13px 20px;border-radius:10px;border:1px solid var(--line);background:var(--panel);font-weight:700}
+    .btn.primary{background:var(--accent);color:#111;border-color:var(--accent)}
+    footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:13px}
+    @media(max-width:800px){
+      .nav-links{display:none}
+      .about{grid-template-columns:1fr}
+      .stats,.skills{grid-template-columns:1fr 1fr}
+      .certs{grid-template-columns:1fr}
+    }
+    @media(max-width:520px){
+      .stats,.skills{grid-template-columns:1fr}
+      .hero{min-height:auto;padding:70px 0}
+      .section{padding:65px 0}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a class="brand" href="#top">HASSAN<span>.</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#career">Career</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Procurement & Strategic Sourcing</div>
+      <h1>HASSAN <span>SAMY</span></h1>
+      <div class="hero-sub">18+ Years of Experience</div>
+      <p class="hero-copy">
+        Procurement and strategic sourcing professional with extensive experience across
+        technology procurement, vendor management, contract administration, and supply chain operations.
+      </p>
+      <div class="chips">
+        <span class="chip">Strategic Procurement</span>
+        <span class="chip">Technology Procurement</span>
+        <span class="chip">Strategic Sourcing</span>
+        <span class="chip">Vendor Management</span>
+        <span class="chip">Contract Management</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about">
+        <div>
+          <div class="eyebrow">About Me</div>
+          <h2 class="section-title">Commercial experience. Procurement discipline. Practical business value.</h2>
+          <p>
+            Procurement and strategic sourcing professional with 18+ years of experience across
+            construction, contracting, technology procurement, vendor management, contract administration,
+            and supply chain operations. Experienced in leading end-to-end procurement activities,
+            developing sourcing strategies, negotiating high-value agreements, managing suppliers,
+            controlling costs, and supporting project delivery and operational continuity.
+          </p>
+        </div>
+        <div class="side-card">
+          <strong>18+</strong>
+          <span>Years of professional experience</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Career Highlights</div>
+      <div class="stats">
+        <div class="stat"><strong>18+</strong><span>Years Experience</span></div>
+        <div class="stat"><strong>EGP 122M+</strong><span>Annual Procurement Budget</span></div>
+        <div class="stat"><strong>5,000+</strong><span>Purchase Orders / Year</span></div>
+        <div class="stat"><strong>EGP 15M</strong><span>Annual Savings</span></div>
+        <div class="stat"><strong>52+</strong><span>Strategic Suppliers</span></div>
+        <div class="stat"><strong>48+</strong><span>Projects Supported</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="expertise">
+    <div class="container">
+      <div class="eyebrow">Core Expertise</div>
+      <h2 class="section-title">Procurement & Commercial Expertise</h2>
+      <p class="section-lead">Core areas of experience across strategic sourcing, commercial management, supplier relationships, and procurement operations.</p>
+      <div class="skills">
+        <div class="skill">Strategic Procurement</div>
+        <div class="skill">Strategic Sourcing</div>
+        <div class="skill">IT & Technology Procurement</div>
+        <div class="skill">Vendor Management</div>
+        <div class="skill">Contract Management</div>
+        <div class="skill">Commercial Negotiation</div>
+        <div class="skill">Cost Optimization</div>
+        <div class="skill">Supplier Performance</div>
+        <div class="skill">Procurement Governance</div>
+        <div class="skill">Spend Analysis</div>
+        <div class="skill">Tender Management</div>
+        <div class="skill">P2P / S2P</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="career">
+    <div class="container">
+      <div class="eyebrow">Professional Journey</div>
+      <h2 class="section-title">Career</h2>
+      <div class="timeline">
+        <div class="job">
+          <span class="dot"></span>
+          <div class="job-date">FEBRUARY 2024 — PRESENT</div>
+          <h3>Procurement Section Head</h3>
+          <div class="job-company">Atrium Quality Contractors – TMG</div>
+          <p>Lead the Procurement Section and oversee the full purchasing cycle for goods, services, technology requirements, and strategic sourcing initiatives.</p>
+        </div>
+        <div class="job">
+          <span class="dot"></span>
+          <div class="job-date">JANUARY 2022 — JANUARY 2024</div>
+          <h3>Procurement Team Leader</h3>
+          <div class="job-company">Atrium Quality Contractors – TMG</div>
+          <p>Led procurement execution and managed software, hardware, infrastructure, cloud services, technology solutions, and enterprise software licensing.</p>
+        </div>
+        <div class="job">
+          <span class="dot"></span>
+          <div class="job-date">APRIL 2018 — DECEMBER 2021</div>
+          <h3>Senior Procurement Specialist — Technology & Strategic Sourcing</h3>
+          <div class="job-company">Atrium Quality Contractors – TMG</div>
+          <p>Managed end-to-end strategic sourcing and procurement for software, hardware, infrastructure, maintenance services, and enterprise solutions.</p>
+        </div>
+        <div class="job">
+          <span class="dot"></span>
+          <div class="job-date">MARCH 2014 — APRIL 2018</div>
+          <h3>Senior Procurement Specialist</h3>
+          <div class="job-company">The Egyptian Contracting Co. El Abd</div>
+          <p>Managed procurement of materials, equipment, and services, including supplier qualification, RFQs, commercial evaluations, negotiations, purchase orders, and procurement agreements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="eyebrow">Professional Certifications</div>
+      <h2 class="section-title">Certifications</h2>
+      <div class="certs">
+        <div class="cert"><strong>CIPS Level 4</strong><span>Diploma in Procurement & Supply — In Progress</span></div>
+        <div class="cert"><strong>CCCE</strong><span>Certified Commercial Contracts Expert</span></div>
+        <div class="cert"><strong>CCCS</strong><span>Certified Commercial & Contracting Specialist</span></div>
+        <div class="cert"><strong>CIPM</strong><span>Certified International Procurement Manager</span></div>
+        <div class="cert"><strong>CISCM</strong><span>Certified International Supply Chain Manager</span></div>
+        <div class="cert"><strong>CISCP</strong><span>Certified International Supply Chain Professional</span></div>
+        <div class="cert"><strong>CIPSCA</strong><span>Certified International Procurement & Supply Chain Ambassador</span></div>
+        <div class="cert"><strong>MCITP</strong><span>Microsoft Certified IT Professional</span></div>
+        <div class="cert"><strong>Certified Trainer</strong><span>Professional Training Certification</span></div>
+        <div class="cert"><strong>ICDL Certified Trainer & Tester</strong><span>ICDL Training & Testing</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Technology & Tools</div>
+      <h2 class="section-title">Systems & Tools</h2>
+      <div class="tools">
+        <span class="tool">SAP ERP</span>
+        <span class="tool">Microsoft Office Suite</span>
+        <span class="tool">Advanced Microsoft Excel</span>
+        <span class="tool">ERP Systems</span>
+        <span class="tool">Procurement Reporting & Analytics</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="eyebrow">Let's Connect</div>
+      <h2>Senior Procurement & Strategic Sourcing Opportunities</h2>
+      <p>Hassan Samy · Giza, Egypt</p>
+      <div class="buttons">
+        <a class="btn primary" href="mailto:Hassan.samy86@gmail.com">Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/hassan-samy-311664403" target="_blank">LinkedIn</a>
+        <a class="btn" href="https://wuzzuf.net/me/hassan-samy" target="_blank">Wuzzuf</a>
+        <a class="btn" href="tel:+201000597676">WhatsApp / Phone</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">© Hassan Samy — Procurement & Strategic Sourcing Professional</div>
+</footer>
+
+</body>
+</html>
